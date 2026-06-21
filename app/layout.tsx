@@ -14,8 +14,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="antialiased min-h-screen flex flex-col animate-flicker">
+    <html lang="en" className="dark" suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={true} className="antialiased min-h-screen flex flex-col animate-flicker">
         <Providers>
           {/* ── Retro Terminal Background ──────────────────────────── */}
           <div

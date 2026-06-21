@@ -198,7 +198,7 @@ export default function Home() {
       <section className="py-10" style={S.sectionBorder}>
         {/* Section header */}
         <div className="text-center mb-10 space-y-2">
-          <p style={{ ...S.label }}>// SYSTEM MODULES</p>
+          <p style={{ ...S.label }}>{'// SYSTEM MODULES'}</p>
           <h2
             style={{
               fontFamily: 'var(--font-retro)',
