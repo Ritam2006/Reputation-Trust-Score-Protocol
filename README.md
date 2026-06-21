@@ -1,3 +1,7 @@
+
+
+<img width="2847" height="1534" alt="image" src="https://github.com/user-attachments/assets/df868f9b-113f-4bcd-90f1-e06bf1e24cff" />
+
 # TrustNet Protocol: Decentralized Reputation & Trust Scores
 
 TrustNet is a decentralized, graph-weighted reputation and trust score protocol built on the Stellar network. By utilizing Soroban smart contracts, TrustNet allows addresses (users, service providers, or developers) to build an on-chain identity and receive weighted ratings. The protocol mitigates Sybil attacks and spam by weighting ratings by the rater's own reputation and admin-verified status (a decentralized Web-of-Trust).
@@ -108,5 +112,5 @@ To deploy the frontend to Vercel:
 ---
 
 ## Placeholders
-* **Contract Address**: `CBICHSYLR3EX47TD6ILAZKLVJKZMGVB234CABE2QAN33ECSKG3BFM6HK`
+* **Contract Address**: `https://stellar.expert/explorer/testnet/contract/CCCWMTHDV6X7LXEZXZSQ6TB7HAJBVNWQLZNQDGULZ5DOMFEFWOSN57KU`
 * **Example Transaction**: `e8220067fb117b884d5df684a0d9b4b0e6e73775f0a0d995c7c25091a134a6ef`
