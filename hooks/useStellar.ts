@@ -5,10 +5,15 @@ import { Networks } from '@creit.tech/stellar-wallets-kit/types';
 import { defaultModules } from '@creit.tech/stellar-wallets-kit/modules/utils';
 
 if (typeof window !== 'undefined') {
-  StellarWalletsKit.init({
-    modules: defaultModules(),
-  });
-  StellarWalletsKit.setNetwork(Networks.TESTNET);
+  try {
+    StellarWalletsKit.init({
+      modules: defaultModules(),
+    });
+    StellarWalletsKit.setNetwork(Networks.TESTNET);
+    console.log('✓ StellarWalletsKit initialized successfully');
+  } catch (err) {
+    console.error('Failed to initialize StellarWalletsKit:', err);
+  }
 }
 
 interface StellarState {
@@ -36,11 +41,24 @@ export const useStellar = create<StellarState>((set, get) => ({
   connectWallet: async () => {
     set({ isLoading: true, error: null });
     try {
+      // Check if wallet kit is properly initialized
+      if (!StellarWalletsKit) {
+        throw new Error('Wallet kit not initialized. Please refresh the page and try again.');
+      }
+
       // Prompt wallet connection modal statically
-      const { address } = await StellarWalletsKit.authModal();
+      let authResult;
+      try {
+        authResult = await StellarWalletsKit.authModal();
+      } catch (authError: any) {
+        console.error('Auth modal error:', authError);
+        throw authError;
+      }
+      
+      const address = authResult?.address;
       
       if (!address) {
-        throw new Error("No address returned from wallet.");
+        throw new Error("No address returned from wallet. Please try again.");
       }
 
       // Fetch balance
@@ -54,23 +72,32 @@ export const useStellar = create<StellarState>((set, get) => ({
         error: null,
       });
     } catch (walletError: any) {
-      console.error('Wallet connection error:', walletError);
-      let userFriendlyMsg = 'Could not retrieve address from wallet.';
+      console.error('Wallet connection error details:', {
+        error: walletError,
+        message: walletError?.message,
+        name: walletError?.name,
+        stack: walletError?.stack,
+      });
       
-      const errMsg = walletError?.message || String(walletError);
+      let userFriendlyMsg = 'Could not connect wallet. Please try again.';
+      
+      const errMsg = (walletError?.message || String(walletError) || '').toLowerCase();
+      
       if (
         errMsg.includes('closed') || 
-        errMsg.includes('User closed') || 
         errMsg.includes('user closed') ||
-        errMsg.includes('dismissed')
+        errMsg.includes('dismissed') ||
+        errMsg.includes('cancelled')
       ) {
-        userFriendlyMsg = 'Wallet connection modal was closed by the user.';
+        userFriendlyMsg = 'Wallet connection was cancelled. Please try again.';
       } else if (
         errMsg.includes('not installed') || 
         errMsg.includes('install') || 
-        errMsg.includes('found')
+        errMsg.includes('extension')
       ) {
-        userFriendlyMsg = 'Selected wallet is not installed. Please install Freighter, Albedo, or Hana first.';
+        userFriendlyMsg = 'Wallet extension not found. Please install Freighter, Albedo, or Hana.';
+      } else if (errMsg.includes('network') || errMsg.includes('testnet')) {
+        userFriendlyMsg = 'Make sure your wallet is set to Testnet network.';
       } else if (errMsg) {
         userFriendlyMsg = errMsg;
       }
