@@ -7,6 +7,8 @@
 
 Vercel Deployment link:https://reputation-trust-score-protocol.vercel.app/
 
+Stellar Expert Link: https://stellar.expert/explorer/testnet/contract/CDJBYKQBZGK6BFYQH5X2CSZ7S3YGWZPIN7FRDF7IRS5PC5OJNX4DPSU7
+
 Contract Address: CDJBYKQBZGK6BFYQH5X2CSZ7S3YGWZPIN7FRDF7IRS5PC5OJNX4DPSU7
 
 Frighter wallet Address: GD7BXNLXPOYKSEQID3GA6UXRYPJOLL4GGDDQWAKM6ZEF6PJN5TTOAH7A
