@@ -5,13 +5,17 @@
 <img width="2873" height="1555" alt="image" src="https://github.com/user-attachments/assets/0259b655-6719-4583-95da-c7d562cc7dc1" />
 
 
-Vercel Deployment link:https://reputation-trust-score-protocol.vercel.app/
+Vercel Deploy Link :https://reputation-trust-score-protocol.vercel.app/
+
+## Cntract Explorer
 
 Stellar Expert Link: https://stellar.expert/explorer/testnet/contract/CDJBYKQBZGK6BFYQH5X2CSZ7S3YGWZPIN7FRDF7IRS5PC5OJNX4DPSU7
 
-Contract Address: CDJBYKQBZGK6BFYQH5X2CSZ7S3YGWZPIN7FRDF7IRS5PC5OJNX4DPSU7
+Contract ID: CDJBYKQBZGK6BFYQH5X2CSZ7S3YGWZPIN7FRDF7IRS5PC5OJNX4DPSU7
 
-Frighter wallet Address: GD7BXNLXPOYKSEQID3GA6UXRYPJOLL4GGDDQWAKM6ZEF6PJN5TTOAH7A
+## Frighter wallet Address
+
+Frighter wallet ID: GD7BXNLXPOYKSEQID3GA6UXRYPJOLL4GGDDQWAKM6ZEF6PJN5TTOAH7A
 
 
 # TrustNet Protocol: Decentralized Reputation & Trust Scores
