@@ -7,9 +7,9 @@
 
 Vercel Deployment link:https://reputation-trust-score-protocol.vercel.app/
 
-Contract Address:CDJBYKQBZGK6BFYQH5X2CSZ7S3YGWZPIN7FRDF7IRS5PC5OJNX4DPSU7
+Contract Address: CDJBYKQBZGK6BFYQH5X2CSZ7S3YGWZPIN7FRDF7IRS5PC5OJNX4DPSU7
 
-Frighter wallet Address:GD7BXNLXPOYKSEQID3GA6UXRYPJOLL4GGDDQWAKM6ZEF6PJN5TTOAH7A
+Frighter wallet Address: GD7BXNLXPOYKSEQID3GA6UXRYPJOLL4GGDDQWAKM6ZEF6PJN5TTOAH7A
 
 
 # TrustNet Protocol: Decentralized Reputation & Trust Scores
@@ -122,5 +122,5 @@ To deploy the frontend to Vercel:
 ---
 
 ## Placeholders
-* **Contract Address**: `https://stellar.expert/explorer/testnet/contract/CCCWMTHDV6X7LXEZXZSQ6TB7HAJBVNWQLZNQDGULZ5DOMFEFWOSN57KU`
+* **Contract Address**: `CDJBYKQBZGK6BFYQH5X2CSZ7S3YGWZPIN7FRDF7IRS5PC5OJNX4DPSU7`
 * **Example Transaction**: `e8220067fb117b884d5df684a0d9b4b0e6e73775f0a0d995c7c25091a134a6ef`
